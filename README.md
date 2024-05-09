@@ -1,4 +1,9 @@
 # E-Commerce-System user instruction
+E-commerce system allow customers to log in and perform shopping operations like purchasing products, viewing order history and showing user consumption reports. Besides, admin users need to be created to manage the whole system, who can create/delete/view customers, products and all the orders. Except for the management part, admin users can view the statistical figures about this system.The whole system is executed in the command line system with well-formatted interface and proper messages to guide users to use the system. We use open-source data from data.world, which contains 9 files of products. All the product's data are retrieved from these files.
+
+I decouple the relationship between various classes. As you can see from the following image, we have four main parts, and when using the system, end users only need to interact with the IOInterface class. The Main Control class handles the main business logic. The operation classes use the model classes as templates to manipulate the data reading/writing. With this design pattern, the input() and print() functions only exist in the I/O interface class. No other classes have these functions. The file reading/writing operations happen in the operation classes, which simulate the database activities.
+![Class relationships](https://github.com/HuyHLuu/E-Commerce-System/assets/88954722/2e485095-e6ef-46ca-bf43-1ac5e3bb7eb6)
+
 
 When booting up the system, users are greeted with 3 options. Users can press 1 to log in ,2 to register account or 3 to close the program. The admin account is registered as the same time the program starts with the following:
 -	Admin username: admin
